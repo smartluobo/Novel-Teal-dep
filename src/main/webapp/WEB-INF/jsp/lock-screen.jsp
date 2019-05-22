@@ -34,7 +34,7 @@
 
     <div class="lock-box text-center">
         <img id="avatar" width="85px" height="85px" src="static/h-ui/images/ucnter/avatar-default.jpg" alt="lock avatar"/>
-        <h1 id="username">www.dongnaoedu.com</h1>
+        <h1 id="username">www.ibay.com</h1>
         <span class="locked">Locked</span>
         <form role="form" class="form-inline" action="index">
             <div class="form-group col-lg-12">

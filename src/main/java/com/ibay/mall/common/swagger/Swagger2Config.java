@@ -28,7 +28,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo()).select()
                 //扫描指定包中的swagger注解
-                //.apis(RequestHandlerSelectors.basePackage("com.dongnaoedu.mall.controller"))
+                //.apis(RequestHandlerSelectors.basePackage("com.ibay.mall.controller"))
                 //扫描所有有注解的api，用这种方式更灵活
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any())
@@ -39,8 +39,8 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("Mall Api Documentation")
                 .description("电商项目单体版本API接口文档")
-                .termsOfServiceUrl("http://www.dongnaoedu.com")
-                .contact(new Contact("动脑学院", "http://www.dongnaoedu.com", "2505507040@qq.com"))
+                .termsOfServiceUrl("http://www.ibay.com")
+                .contact(new Contact("Novel Tea", "http://www.ibay.com", "1043254182@qq.com"))
                 .version("1.0.0")
                 .build();
     }

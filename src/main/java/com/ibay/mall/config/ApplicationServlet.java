@@ -9,7 +9,7 @@ import com.ibay.mall.pojo.TbBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//import com.dongnaoedu.mall.common.fastdfs.FileManagerUtils;
+//import com.ibay.mall.common.fastdfs.FileManagerUtils;
 import com.ibay.mall.service.SystemService;
 
 public class ApplicationServlet extends HttpServlet {

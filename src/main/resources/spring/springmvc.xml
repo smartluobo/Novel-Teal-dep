@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 	
-    <context:component-scan base-package="com.dongnaoedu.mall.controller" />
+    <context:component-scan base-package="com.ibay.mall.controller" />
 
     <!--SpringMVC视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

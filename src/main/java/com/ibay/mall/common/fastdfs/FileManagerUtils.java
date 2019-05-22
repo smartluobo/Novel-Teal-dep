@@ -1,4 +1,4 @@
-//package com.dongnaoedu.mall.common.fastdfs;
+//package com.ibay.mall.common.fastdfs;
 //
 //import java.io.ByteArrayOutputStream;
 //import java.io.IOException;

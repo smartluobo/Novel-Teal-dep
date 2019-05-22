@@ -1,4 +1,4 @@
-//package com.dongnaoedu.mall.controller;
+//package com.ibay.mall.controller;
 //
 //import java.io.IOException;
 //import java.io.InputStream;
@@ -14,8 +14,8 @@
 //import org.springframework.web.multipart.MultipartFile;
 //
 //import XmallUploadException;
-//import com.dongnaoedu.mall.common.fastdfs.FastDFSClient;
-//import com.dongnaoedu.mall.common.fastdfs.FastDFSFile;
+//import com.ibay.mall.common.fastdfs.FastDFSClient;
+//import com.ibay.mall.common.fastdfs.FastDFSFile;
 //import KindEditorResult;
 //import Result;
 //import ResultUtil;

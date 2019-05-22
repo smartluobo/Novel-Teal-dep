@@ -1,4 +1,4 @@
-//package com.dongnaoedu.mall.service.impl;
+//package com.ibay.mall.service.impl;
 //
 //import XmallException;
 //import TbItemMapper;

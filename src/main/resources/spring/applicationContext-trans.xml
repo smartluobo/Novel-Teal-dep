@@ -27,6 +27,6 @@
     <!-- 切面 -->
     <aop:config>
         <aop:advisor advice-ref="txAdvice"
-                     pointcut="execution(* com.dongnaoedu.mall.service..*.*(..))" />
+                     pointcut="execution(* com.ibay.mall.service..*.*(..))" />
     </aop:config>
 </beans>

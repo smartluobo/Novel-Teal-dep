@@ -12,7 +12,7 @@
 	<!-- 会话Cookie模板 -->
 	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
 		<!-- cookie的name，我故意取名叫xxxxbaidu -->
-	    <constructor-arg value="dongnaoedu"/>
+	    <constructor-arg value="ibay"/>
 	    <property name="httpOnly" value="true"/>
 	    <!-- cookie的有效时间 -->
 	    <property name="maxAge" value="-1"/>

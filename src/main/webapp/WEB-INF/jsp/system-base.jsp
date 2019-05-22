@@ -80,13 +80,13 @@
             <label class="form-label col-xs-4 col-sm-2">
                 底部版权信息：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" id="copyright" name="copyright" placeholder="&copy; 2018 dongnaoedu.com" value="" class="input-text">
+                <input type="text" id="copyright" name="copyright" placeholder="&copy; 2018 ibay.com" value="" class="input-text">
             </div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">前台URL：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" id="frontUrl" name="frontUrl" placeholder="http://www.dongnaoedu.com" value="" class="input-text">
+                <input type="text" id="frontUrl" name="frontUrl" placeholder="http://www.ibay.com" value="" class="input-text">
             </div>
         </div>
         <div class="row cl">

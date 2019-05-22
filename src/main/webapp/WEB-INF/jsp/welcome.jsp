@@ -285,7 +285,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="http://bbs.dongnaoedu.com/" target="_blank">
+                                                <a href="http://bbs.ibay.com/" target="_blank">
                                                     <i class="icon-pinterest"></i>
                                                 </a>
                                             </li>
@@ -304,7 +304,7 @@
     <!--footer start-->
     <footer class="site-footer">
         <div class="text-center">
-            Copyright &copy;2017 <a href="http://www.dongnaoedu.com" target="_blank">动脑学院</a> All Rights Reserved.
+            Copyright &copy;2017 <a href="http://www.ibay.com" target="_blank">Novel Tea</a> All Rights Reserved.
             <a href="#" class="go-top">
                 <i class="icon-angle-up"></i>
             </a>

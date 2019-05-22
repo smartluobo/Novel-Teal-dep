@@ -71,7 +71,7 @@ public class EmailUtil {
             messageHelper.setFrom(EMAIL_SENDER);
             messageHelper.setSubject(title);
             // true表示HTML格式的邮件
-            String content="尊敬的管理员dongnao您好，您收到了来自"+title+"确认订单，请您及时处理：<br>";
+            String content="尊敬的管理员admin您好，您收到了来自"+title+"确认订单，请您及时处理：<br>";
             content+="-------------------------------------<br>";
             content+="登录账号："+tbThanks.getUsername()+"<br>";
             content+="用户昵称："+tbThanks.getNickName()+"<br>";

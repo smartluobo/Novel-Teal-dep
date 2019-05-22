@@ -10,8 +10,6 @@ import com.ibay.mall.pojo.front.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.dongnaoedu.mall.pojo.*;
-
 public class DtoUtil {
 
     private final static Logger log= LoggerFactory.getLogger(DtoUtil.class);

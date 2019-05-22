@@ -1,4 +1,4 @@
-//package com.dongnaoedu.mall.common.fastdfs;
+//package com.ibay.mall.common.fastdfs;
 //
 ///**
 // * 文件对象,包含文件基础信息

@@ -1,12 +1,15 @@
 package com.ibay.mall.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.ibay.mall.common.exception.XmallException;
 import com.ibay.mall.common.jedis.JedisClient;
 import com.ibay.mall.mapper.TbItemDescMapper;
 import com.ibay.mall.mapper.TbItemMapper;
 import com.ibay.mall.mapper.TbPanelContentMapper;
 import com.ibay.mall.mapper.TbPanelMapper;
-import com.dongnaoedu.mall.pojo.*;
 import com.ibay.mall.pojo.*;
 import com.ibay.mall.pojo.common.DataTablesResult;
 import com.ibay.mall.pojo.front.AllGoodsResult;
@@ -14,10 +17,6 @@ import com.ibay.mall.pojo.front.Product;
 import com.ibay.mall.pojo.front.ProductDet;
 import com.ibay.mall.service.ContentService;
 import com.ibay.mall.utils.DtoUtil;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

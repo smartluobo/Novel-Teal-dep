@@ -7,7 +7,9 @@ import com.ibay.mall.pojo.TbUserExample;
 import org.apache.ibatis.annotations.Param;
 
 import com.ibay.mall.pojo.TbUser;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbUserMapper {
     long countByExample(TbUserExample example);
 

@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-//import com.dongnaoedu.mall.common.fastdfs.FastDFSClient;
-//import com.dongnaoedu.mall.common.fastdfs.FastDFSFile;
+//import com.ibay.mall.common.fastdfs.FastDFSClient;
+//import com.ibay.mall.common.fastdfs.FastDFSFile;
 import com.ibay.mall.common.jedis.JedisClient;
 import com.ibay.mall.service.LoginService;
 import com.ibay.mall.service.MemberFrontService;
