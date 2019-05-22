@@ -275,7 +275,7 @@
                                     <footer class="social-footer">
                                         <ul>
                                             <li>
-                                                <a href="http://code.dongnaoedu.com/allen/dongnao-mall.git" target="_blank">
+                                                <a href="https://github.com/smartluobo/Novel-Teal-dep.git" target="_blank">
                                                     <i class="icon-github"></i>
                                                 </a>
                                             </li>

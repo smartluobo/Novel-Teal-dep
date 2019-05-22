@@ -65,7 +65,7 @@
     
     <servlet>
     	<servlet-name>ApplicationServlet</servlet-name>
-    	<servlet-class>com.dongnaoedu.mall.config.ApplicationServlet</servlet-class>
+    	<servlet-class>com.ibay.mall.config.ApplicationServlet</servlet-class>
     	<load-on-startup>2</load-on-startup>
     </servlet>
 

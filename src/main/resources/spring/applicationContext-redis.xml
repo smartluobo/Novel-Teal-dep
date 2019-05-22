@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 	
 	<!-- 连接redis单机版 -->
-	<bean id="jedisClientPool" class="com.dongnaoedu.mall.common.jedis.JedisClientPool">
+	<bean id="jedisClientPool" class="com.ibay.mall.common.jedis.JedisClientPool">
 		<property name="jedisPool" ref="jedisPool"></property>
 	</bean>
 	<bean id="genericObjectPoolConfig" class="org.apache.commons.pool2.impl.GenericObjectPoolConfig">
@@ -21,7 +21,7 @@
 	</bean>
 
 	<!-- 连接redis集群 -->
-	<!--<bean id="jedisClientCluster" class="com.dongnaoedu.mall.common.jedis.JedisClientCluster">
+	<!--<bean id="jedisClientCluster" class="JedisClientCluster">
 		<property name="jedisCluster" ref="jedisCluster"/>
 	</bean>
 	<bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">

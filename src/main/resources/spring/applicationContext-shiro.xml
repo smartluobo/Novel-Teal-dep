@@ -21,17 +21,17 @@
 
 	<!-- ************************ cache ************************ -->
 	<!-- 用户缓存 -->
-	<bean id="customShiroCacheManager" class="com.dongnaoedu.mall.common.shiro.cache.CustomShiroCacheManager">
+	<bean id="customShiroCacheManager" class="com.ibay.mall.common.shiro.cache.CustomShiroCacheManager">
 	    <property name="shiroCacheManager" ref="jedisShiroCacheManager"/>
 	</bean>
 	
 	<!-- shiro 缓存实现，对ShiroCacheManager，我是采用redis的实现 -->
-	<bean id="jedisShiroCacheManager" class="com.dongnaoedu.mall.common.shiro.cache.JedisShiroCacheManager">
+	<bean id="jedisShiroCacheManager" class="com.ibay.mall.common.shiro.cache.JedisShiroCacheManager">
 	    <property name="jedisManager" ref="jedisManager"/>
 	</bean>
 
 	<!-- redis 的缓存 -->
-	<bean id="jedisManager" class="com.dongnaoedu.mall.common.shiro.cache.JedisManager">
+	<bean id="jedisManager" class="com.ibay.mall.common.shiro.cache.JedisManager">
 	    <property name="jedisPool" ref="jedisPool"/>
 	</bean>
 	
@@ -61,25 +61,25 @@
 	</bean>
 	
 	<!-- custom shiro session listener -->
-	<bean id="customSessionListener" class="com.dongnaoedu.mall.common.shiro.sesion.CustomSessionListener">
+	<bean id="customSessionListener" class="com.ibay.mall.common.shiro.sesion.CustomSessionListener">
 		<property name="shiroSessionRepository" ref="jedisShiroSessionRepository"/>
 	</bean>
 	
 	<!-- custom shiro session dao -->
-	<bean id="customShiroSessionDAO" class="com.dongnaoedu.mall.common.shiro.sesion.CustomShiroSessionDAO">
+	<bean id="customShiroSessionDAO" class="com.ibay.mall.common.shiro.sesion.CustomShiroSessionDAO">
 	    <property name="shiroSessionRepository" ref="jedisShiroSessionRepository"/>
 	    <property name="sessionIdGenerator" ref="sessionIdGenerator"/>
 	</bean>
 	
 	<!-- session 创建、删除、查询 -->
-	<bean id="jedisShiroSessionRepository" class="com.dongnaoedu.mall.common.shiro.sesion.JedisShiroSessionRepository" >
+	<bean id="jedisShiroSessionRepository" class="com.ibay.mall.common.shiro.sesion.JedisShiroSessionRepository" >
 		<property name="jedisManager" ref="jedisManager"/>
 	</bean>
 	
 	
 	<!-- ************************ shiro 核心功能配置 ************************ -->
     <!-- 配置自定义Realm -->
-    <bean id="myRealm" class="com.dongnaoedu.mall.common.shiro.MyRealm"/>
+    <bean id="myRealm" class="com.ibay.mall.common.shiro.MyRealm"/>
 
     <!-- 安全管理器 -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
@@ -91,10 +91,10 @@
         
     </bean>
 
-    <bean id="perms" class="com.dongnaoedu.mall.common.shiro.MyPermissionFilter"/>
+    <bean id="perms" class="com.ibay.mall.common.shiro.MyPermissionFilter"/>
 
     <!-- Shiro过滤器 核心-->
-    <bean id="shiroFilter" class="com.dongnaoedu.mall.common.shiro.MyShiroFilterFactoryBean">
+    <bean id="shiroFilter" class="com.ibay.mall.common.shiro.MyShiroFilterFactoryBean">
         <!-- Shiro的核心安全接口,这个属性是必须的 -->
         <property name="securityManager" ref="securityManager"/>
         <!-- 身份认证失败，则跳转到登录页面的配置 -->

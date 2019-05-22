@@ -39,7 +39,7 @@
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven/>
 	或者
-	<bean id="swagger2Config" class="com.dongnaoedu.mall.common.swagger.Swagger2Config" />
+	<bean id="swagger2Config" class="Swagger2Config" />
 	<mvc:default-servlet-handler />
 	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
 	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" /> 

@@ -1,0 +1,27 @@
+package com.ibay.mall.service;
+
+
+
+import java.util.List;
+
+import com.ibay.mall.pojo.front.CartProduct;
+
+public interface CartService {
+
+    int addCart(long userId, long itemId, int num);
+
+    List<CartProduct> getCartList(long userId);
+
+    int updateCartNum(long userId, long itemId, int num, String checked);
+
+    int deleteCartItem(long userId, long itemId);
+
+    int checkAll(long userId, String checked);
+
+    /**
+     * 删除全部勾选的
+     * @param userId
+     * @return
+     */
+    int delChecked(long userId);
+}
