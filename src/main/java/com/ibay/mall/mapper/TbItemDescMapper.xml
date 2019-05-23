@@ -122,8 +122,7 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.ibay.mall.pojo.TbItemDesc">
-    insert into tb_item_desc (item_id, created, updated, 
-      item_desc)
+    insert into tb_item_desc (item_id, created, updated, item_desc)
     values (#{itemId,jdbcType=BIGINT}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}, 
       #{itemDesc,jdbcType=LONGVARCHAR})
   </insert>

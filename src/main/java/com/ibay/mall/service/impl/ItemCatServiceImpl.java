@@ -35,7 +35,7 @@ public class ItemCatServiceImpl implements ItemCatService {
         TbItemCatExample example=new TbItemCatExample();
         TbItemCatExample.Criteria criteria=example.createCriteria();
         //排序
-        example.setOrderByClause("sort_order");
+        example.setOrderByClause("sort_order desc");
         //条件查询
         criteria.andParentIdEqualTo(new Long(parentId));
         List<TbItemCat> list = tbItemCatMapper.selectByExample(example);

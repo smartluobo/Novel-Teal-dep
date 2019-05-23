@@ -208,8 +208,8 @@ public class ItemServiceImpl implements ItemService {
         tbItemDesc.setUpdated(new Date());
         tbItemDesc.setCreated(oldTbItem.getCreated());
 
-        if(tbItemDescMapper.updateByPrimaryKey(tbItemDesc)!=1){
-            throw new XmallException("更新商品详情失败");
+        if(tbItemDescMapper.updateByPrimaryKey(tbItemDesc)==0){
+            tbItemDescMapper.insert(tbItemDesc);
         }
         //同步缓存
         deleteProductDetRedis(id);
