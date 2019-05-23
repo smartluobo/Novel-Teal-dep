@@ -50,17 +50,19 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public ItemDto getItemById(Long id) {
-        ItemDto itemDto=new ItemDto();
+        ItemDto itemDto = new ItemDto();
 
         TbItem tbItem=tbItemMapper.selectByPrimaryKey(id);
+
         itemDto= DtoUtil.TbItem2ItemDto(tbItem);
 
         TbItemCat tbItemCat=tbItemCatMapper.selectByPrimaryKey(itemDto.getCid());
         itemDto.setCname(tbItemCat.getName());
 
         TbItemDesc tbItemDesc=tbItemDescMapper.selectByPrimaryKey(id);
-        itemDto.setDetail(tbItemDesc.getItemDesc());
-
+        if (tbItemDesc != null){
+            itemDto.setDetail(tbItemDesc.getItemDesc());
+        }
         return itemDto;
     }
 
@@ -150,9 +152,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public TbItem addItem(ItemDto itemDto) {
-        long id= IDUtil.getRandomId();
+        //long id= IDUtil.getRandomId();
         TbItem tbItem= DtoUtil.ItemDto2TbItem(itemDto);
-        tbItem.setId(id);
+        //tbItem.setId(id);
         tbItem.setStatus((byte) 1);
         tbItem.setCreated(new Date());
         tbItem.setUpdated(new Date());
@@ -164,7 +166,7 @@ public class ItemServiceImpl implements ItemService {
         }
 
         TbItemDesc tbItemDesc=new TbItemDesc();
-        tbItemDesc.setItemId(id);
+        tbItemDesc.setItemId(tbItem.getId());
         tbItemDesc.setItemDesc(itemDto.getDetail());
         tbItemDesc.setCreated(new Date());
         tbItemDesc.setUpdated(new Date());
@@ -178,7 +180,7 @@ public class ItemServiceImpl implements ItemService {
         }catch (Exception e){
             log.error(e.toString());
         }
-        return getNormalItemById(id);
+        return getNormalItemById(tbItem.getId());
     }
 
     @Override

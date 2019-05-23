@@ -27,6 +27,7 @@
     <!--配置资源映射-->
     <mvc:resources mapping="/lib/**" location="/lib/"/>
     <mvc:resources mapping="/static/**" location="/static/"/>
+    <mvc:resources mapping="/static/image/**" location="${IMAGE_SAVE_PATH}"/>
     <mvc:resources mapping="/temp/**" location="/temp/"/>
     <mvc:resources mapping="/icon/**" location="/icon/"/>
     <mvc:resources mapping="/upload/**" location="/upload/"/>

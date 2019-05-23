@@ -105,12 +105,12 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.ibay.mall.pojo.TbItem">
-    insert into tb_item (id, title, sell_point, 
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id"  parameterType="com.ibay.mall.pojo.TbItem">
+    insert into tb_item (title, sell_point,
       price, num, limit_num, 
       image, cid, status, 
       created, updated)
-    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR}, 
+    values (#{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR},
       #{price,jdbcType=BIGINT}, #{num,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER}, 
       #{image,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, 
       #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
