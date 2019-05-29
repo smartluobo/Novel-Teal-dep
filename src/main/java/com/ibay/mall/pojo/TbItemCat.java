@@ -10,9 +10,9 @@ public class TbItemCat implements Serializable {
 
     private String name;
 
-    private Integer status;
+    private int status;
 
-    private Integer sortOrder;
+    private int sortOrder;
 
     private Boolean isParent;
 
