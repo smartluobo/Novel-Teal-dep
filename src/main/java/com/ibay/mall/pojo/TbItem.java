@@ -27,6 +27,10 @@ public class TbItem implements Serializable{
 
     private Date updated;
 
+    private String simpleDesc;
+
+    private String skuTypeIds;
+
     public Long getId() {
         return id;
     }
@@ -113,6 +117,22 @@ public class TbItem implements Serializable{
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    public String getSimpleDesc() {
+        return simpleDesc;
+    }
+
+    public void setSimpleDesc(String simpleDesc) {
+        this.simpleDesc = simpleDesc;
+    }
+
+    public String getSkuTypeIds() {
+        return skuTypeIds;
+    }
+
+    public void setSkuTypeIds(String skuTypeIds) {
+        this.skuTypeIds = skuTypeIds;
     }
 
     public String[] getImages() {

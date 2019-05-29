@@ -70,6 +70,13 @@
                 <input type="text" name="limitNum" id="limitNum" placeholder="0~9999" value="" class="input-text" style="width:50%">
                 件</div>
         </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>当前缩略图：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+
+                <img src="" alt="" id="showImg" style="height: 100px;width: 100px;"
+                </div>
+        </div>
         <input type="text" name="image" id="image" hidden/>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">展示缩略图片上传：</label>
@@ -237,6 +244,7 @@
                 $("#cname").val(data.result.cname);
                 $("#cid").val(data.result.cid);
                 $("#limitNum").val(data.result.limitNum);
+                $("#showImg").attr("src",data.result.image);
                 htmlData=data.result.detail;
                 KindEditor.html('#detail', htmlData);
             },

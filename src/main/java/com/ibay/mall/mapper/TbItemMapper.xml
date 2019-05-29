@@ -4,6 +4,8 @@
   <resultMap id="BaseResultMap" type="com.ibay.mall.pojo.TbItem">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="simple_desc" jdbcType="VARCHAR" property="simpleDesc" />
+    <result column="sku_type_ids" jdbcType="VARCHAR" property="skuTypeIds" />
     <result column="sell_point" jdbcType="VARCHAR" property="sellPoint" />
     <result column="price" jdbcType="BIGINT" property="price" />
     <result column="num" jdbcType="INTEGER" property="num" />
@@ -73,7 +75,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, title, sell_point, price, num, limit_num, image, cid, status, created, updated
+    id, title, sku_type_ids,simple_desc, sell_point, price, num, limit_num, image, cid, `status` , created, updated
   </sql>
   <select id="selectByExample" parameterType="com.ibay.mall.pojo.TbItemExample" resultMap="BaseResultMap">
     select
@@ -108,12 +110,12 @@
   <insert id="insert" useGeneratedKeys="true" keyProperty="id"  parameterType="com.ibay.mall.pojo.TbItem">
     insert into tb_item (title, sell_point,
       price, num, limit_num, 
-      image, cid, status, 
-      created, updated)
+      image, cid, `status`,
+      created, updated,simple_desc,sku_type_ids)
     values (#{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR},
       #{price,jdbcType=BIGINT}, #{num,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER}, 
       #{image,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, 
-      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
+      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP},#{simpleDesc,jdbcType=VARCHAR},#{skuTypeIds,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.ibay.mall.pojo.TbItem">
     insert into tb_item
@@ -150,6 +152,12 @@
       </if>
       <if test="updated != null">
         updated,
+      </if>
+      <if test="simpleDesc != null">
+        simple_desc,
+      </if>
+      <if test="skuTypeIds != null">
+        sku_type_ids,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -222,7 +230,7 @@
         cid = #{record.cid,jdbcType=BIGINT},
       </if>
       <if test="record.status != null">
-        status = #{record.status,jdbcType=TINYINT},
+        `status` = #{record.status,jdbcType=TINYINT},
       </if>
       <if test="record.created != null">
         created = #{record.created,jdbcType=TIMESTAMP},
